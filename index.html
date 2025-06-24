@@ -235,6 +235,7 @@
             box-shadow: var(--box-shadow-neon-secondary);
             transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
             text-align: center;
+            text-decoration: none; /* Ajouté pour les liens stylisés comme des boutons */
         }
         .view-details-button:hover, .buy-button-modal:hover {
             background-color: var(--accent-neon);
@@ -317,7 +318,7 @@
             position: absolute; left: 0;
         }
         .modal-content .stock-indicator { margin-bottom: 1.5rem; }
-        #modalPaypalButtonContainer form { margin-top: 1rem; }
+        #modalPaypalButtonContainer { margin-top: 1rem; } /* Changement: suppression de form */
 
 
         /* --- Responsive Design --- */
@@ -394,9 +395,9 @@
                         data-product-details-list='["Premium soft cotton","Durable, high-resolution print","Unique cyber-pop design","Shipped from USA-based partners"]'
                         data-product-stock-text="> Execute_Order: 8 units remaining!"
                         data-product-stock-class="urgent"
-                        data-paypal-id="NFK6LJ27ZYSF8">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/NFK6LJ27ZYSF8">
                         <script type="application/ld+json">
-                        { "@context": "https://schema.org/", "@type": "Product", "name": "Avocado Glitch Tee - Food Art", "image": "https://tacotypo.com/foodarta.png", "description": "Smiling avocado with a glitch effect. Vector art.", "sku": "TT-FA-001A-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "27.99", "availability": "https://schema.org/InStock", "inventoryLevel": {"@type": "QuantitativeValue", "value": "8"} }}
+                        { "@context": "https://schema.org/", "@type": "Product", "name": "Avocado Glitch Tee - Food Art", "image": "https://tacotypo.com/foodarta.png", "description": "Smiling avocado with a glitch effect. Vector art.", "sku": "TT-FA-001A-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "27.99", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.paypal.com/ncp/payment/NFK6LJ27ZYSF8", "inventoryLevel": {"@type": "QuantitativeValue", "value": "8"} }}
                         </script>
                         <div class="product-image-container">
                             <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="foodarta.png" alt="TacoTypo Food Art T-Shirt: Smiling Avocado with Glitch Effect" width="500" height="500">
@@ -419,9 +420,9 @@
                         data-product-details-list='["Premium soft cotton","Vibrant, long-lasting print","Cyber-minimalist aesthetic","Shipped from USA-based partners"]'
                         data-product-stock-text="> Low_Supply: 14 units detected."
                         data-product-stock-class="low"
-                        data-paypal-id="79SUNDJLZN4WY">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/79SUNDJLZN4WY">
                          <script type="application/ld+json">
-                        { "@context": "https://schema.org/", "@type": "Product", "name": "Neon Coffee Heartbeat Tee", "image": "https://tacotypo.com/foodartb.png", "description": "Minimalist coffee cup, heart steam as a neon EKG line.", "sku": "TT-FA-001B-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "27.99", "availability": "https://schema.org/InStock", "inventoryLevel": {"@type": "QuantitativeValue", "value": "14"} }}
+                        { "@context": "https://schema.org/", "@type": "Product", "name": "Neon Coffee Heartbeat Tee", "image": "https://tacotypo.com/foodartb.png", "description": "Minimalist coffee cup, heart steam as a neon EKG line.", "sku": "TT-FA-001B-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "27.99", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.paypal.com/ncp/payment/79SUNDJLZN4WY", "inventoryLevel": {"@type": "QuantitativeValue", "value": "14"} }}
                         </script>
                         <div class="product-image-container">
                              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="foodartb.png" alt="TacoTypo Food Art T-Shirt: Neon Coffee Cup Heartbeat" width="500" height="500">
@@ -443,10 +444,10 @@
                         data-product-description-full="Unleash sweet chaos with the Donut_Havoc.tee. A delicious pink donut experiences a data corruption, featuring a glitchy bite mark and erratically scattered sprinkles. This design is a playful take on food art colliding with digital disruption, rendered in a vibrant cyber-pop vector style."
                         data-product-details-list='["Premium soft cotton","High-resolution glitch print","Playful cyber-donut design","Shipped from USA-based partners"]'
                         data-product-stock-text="> Glitch_Stock: 10 units available."
-                        data-product-stock-class="low" /* Ou une autre classe si besoin */
-                        data-paypal-id="BM3S6SSBUHGEU">
+                        data-product-stock-class="low"
+                        data-paypal-link="https://www.paypal.com/ncp/payment/BM3S6SSBUHGEU">
                         <script type="application/ld+json">
-                        { "@context": "https://schema.org/", "@type": "Product", "name": "Donut Havoc Glitch Tee", "image": "https://tacotypo.com/foodartc.png", "description": "Pink donut with a glitchy bite and chaotic sprinkles. Cyber-pop food art.", "sku": "TT-FA-001C-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "27.99", "availability": "https://schema.org/InStock", "inventoryLevel": {"@type": "QuantitativeValue", "value": "10"} }}
+                        { "@context": "https://schema.org/", "@type": "Product", "name": "Donut Havoc Glitch Tee", "image": "https://tacotypo.com/foodartc.png", "description": "Pink donut with a glitchy bite and chaotic sprinkles. Cyber-pop food art.", "sku": "TT-FA-001C-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "27.99", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.paypal.com/ncp/payment/BM3S6SSBUHGEU", "inventoryLevel": {"@type": "QuantitativeValue", "value": "10"} }}
                         </script>
                         <div class="product-image-container">
                             <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="foodartc.png" alt="TacoTypo Food Art T-Shirt: Donut with Bite and Sprinkles - Cyber Glitch" width="500" height="500">
@@ -476,9 +477,9 @@
                         data-product-details-list='["100% Airlume combed cotton","High-fidelity 3D effect print","Futuristic typographic design","Shipped from USA-based partners"]'
                         data-product-stock-text="> Alert_Stock_Low: 11 units."
                         data-product-stock-class="low"
-                        data-paypal-id="RZHKJ8SSU4WL6">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/RZHKJ8SSU4WL6">
                         <script type="application/ld+json">
-                        { "@context": "https://schema.org/", "@type": "Product", "name": "'Fuel Matrix' 3D Neon Tee", "image": "https://tacotypo.com/3dtypoa.png", "description": "'Fuel Your Day' in 3D neon matrix style.", "sku": "TT-3D-002A-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "29.99", "availability": "https://schema.org/InStock", "inventoryLevel": {"@type": "QuantitativeValue", "value": "11"} }}
+                        { "@context": "https://schema.org/", "@type": "Product", "name": "'Fuel Matrix' 3D Neon Tee", "image": "https://tacotypo.com/3dtypoa.png", "description": "'Fuel Your Day' in 3D neon matrix style.", "sku": "TT-3D-002A-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "29.99", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.paypal.com/ncp/payment/RZHKJ8SSU4WL6", "inventoryLevel": {"@type": "QuantitativeValue", "value": "11"} }}
                         </script>
                         <div class="product-image-container">
                             <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="3dtypoa.png" alt="TacoTypo 3D Typography T-Shirt: 'Fuel Your Day' Neon Matrix" width="500" height="500">
@@ -499,9 +500,9 @@
                         data-product-details-list='["Premium soft feel cotton blend","Reflective chrome-effect print","Bold 3D typographic art","Shipped from USA-based partners"]'
                         data-product-stock-text="> Critical_Stock: 7 units!"
                         data-product-stock-class="urgent"
-                        data-paypal-id="3DV2JZ4G2X5EY">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/3DV2JZ4G2X5EY">
                         <script type="application/ld+json">
-                        { "@context": "https://schema.org/", "@type": "Product", "name": "'VIBES' Chrome Render Tee", "image": "https://tacotypo.com/3dtypob.png", "description": "'VIBES' in chunky 3D chrome, cybernetic render.", "sku": "TT-3D-002B-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "29.99", "availability": "https://schema.org/InStock", "inventoryLevel": {"@type": "QuantitativeValue", "value": "7"} }}
+                        { "@context": "https://schema.org/", "@type": "Product", "name": "'VIBES' Chrome Render Tee", "image": "https://tacotypo.com/3dtypob.png", "description": "'VIBES' in chunky 3D chrome, cybernetic render.", "sku": "TT-3D-002B-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "29.99", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.paypal.com/ncp/payment/3DV2JZ4G2X5EY", "inventoryLevel": {"@type": "QuantitativeValue", "value": "7"} }}
                         </script>
                         <div class="product-image-container">
                             <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="3dtypob.png" alt="TacoTypo 3D Typography T-Shirt: 'VIBES' Chrome Render" width="500" height="500">
@@ -523,10 +524,10 @@
                         data-product-description-full="Execute the Go_BIG_Protocol.tee. This impactful design features 'GO BIG' in a bold, sans-serif font with a realistic bevel and emboss effect, rendered in a vibrant cyan gradient. It's a typographic command for those ready to make a statement and stand out from the noise."
                         data-product-details-list='["Impactful 3D bevel print","Vibrant cyan gradient","Bold statement typography","Shipped from USA-based partners"]'
                         data-product-stock-text="> Max_Output: 15 units."
-                        data-product-stock-class="" /* Pas de classe urgente/low spécifique pour l'instant */
-                        data-paypal-id="5SHRHDVDR3MNE">
+                        data-product-stock-class="" 
+                        data-paypal-link="https://www.paypal.com/ncp/payment/5SHRHDVDR3MNE">
                         <script type="application/ld+json">
-                        { "@context": "https://schema.org/", "@type": "Product", "name": "'GO BIG' Bevel 3D Cyan Tee", "image": "https://tacotypo.com/3dtypoc.png", "description": "'GO BIG' in bold 3D bevel and emboss, vibrant cyan gradient.", "sku": "TT-3D-002C-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "29.99", "availability": "https://schema.org/InStock", "inventoryLevel": {"@type": "QuantitativeValue", "value": "15"} }}
+                        { "@context": "https://schema.org/", "@type": "Product", "name": "'GO BIG' Bevel 3D Cyan Tee", "image": "https://tacotypo.com/3dtypoc.png", "description": "'GO BIG' in bold 3D bevel and emboss, vibrant cyan gradient.", "sku": "TT-3D-002C-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "29.99", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.paypal.com/ncp/payment/5SHRHDVDR3MNE", "inventoryLevel": {"@type": "QuantitativeValue", "value": "15"} }}
                         </script>
                         <div class="product-image-container">
                             <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="3dtypoc.png" alt="TacoTypo 3D Typography T-Shirt: 'GO BIG' - Cyan Bevel" width="500" height="500">
@@ -556,9 +557,9 @@
                         data-product-details-list='["Soft, breathable cotton","Y2K glitch art print","Nostalgic yet futuristic","Shipped from USA-based partners"]'
                         data-product-stock-text="> Execute_Purchase: 9 left."
                         data-product-stock-class="urgent"
-                        data-paypal-id="E8Z27EHLMCUV4">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/E8Z27EHLMCUV4">
                         <script type="application/ld+json">
-                        { "@context": "https://schema.org/", "@type": "Product", "name": "GeoNet Glitch Y2K Tee", "image": "https://tacotypo.com/retoa.png", "description": "Y2K geometric neon lines with glitch artifacts.", "sku": "TT-YK-003A-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "28.99", "availability": "https://schema.org/InStock", "inventoryLevel": {"@type": "QuantitativeValue", "value": "9"} }}
+                        { "@context": "https://schema.org/", "@type": "Product", "name": "GeoNet Glitch Y2K Tee", "image": "https://tacotypo.com/retoa.png", "description": "Y2K geometric neon lines with glitch artifacts.", "sku": "TT-YK-003A-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "28.99", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.paypal.com/ncp/payment/E8Z27EHLMCUV4", "inventoryLevel": {"@type": "QuantitativeValue", "value": "9"} }}
                         </script>
                         <div class="product-image-container">
                             <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="retoa.png" alt="TacoTypo Retro Y2K T-Shirt: Geometric Neon Glitch Lines" width="500" height="500">
@@ -579,9 +580,9 @@
                         data-product-details-list='["Comfortable cotton fabric","Pixel art glitch design","Vibrant neon colors","Shipped from USA-based partners"]'
                         data-product-stock-text="> Warning_Stock_Low: 12 units."
                         data-product-stock-class="low"
-                        data-paypal-id="8PAC3XV2WAWZ2">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/8PAC3XV2WAWZ2">
                         <script type="application/ld+json">
-                        { "@context": "https://schema.org/", "@type": "Product", "name": "'GAME_ON' Pixel Corruption Tee", "image": "https://tacotypo.com/retob.png", "description": "'GAME ON' in 90s pixel art with a datamosh effect.", "sku": "TT-YK-003B-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "28.99", "availability": "https://schema.org/InStock", "inventoryLevel": {"@type": "QuantitativeValue", "value": "12"} }}
+                        { "@context": "https://schema.org/", "@type": "Product", "name": "'GAME_ON' Pixel Corruption Tee", "image": "https://tacotypo.com/retob.png", "description": "'GAME ON' in 90s pixel art with a datamosh effect.", "sku": "TT-YK-003B-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "28.99", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.paypal.com/ncp/payment/8PAC3XV2WAWZ2", "inventoryLevel": {"@type": "QuantitativeValue", "value": "12"} }}
                         </script>
                         <div class="product-image-container">
                             <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="retob.png" alt="TacoTypo Retro Y2K T-Shirt: 'GAME ON' Pixel Glitch" width="500" height="500">
@@ -603,10 +604,10 @@
                         data-product-description-full="Access the Chrome_Bubble_Retro.tee, inspired by early 2000s tech aesthetics. It features shiny chrome bubble letters spelling 'RETRO', accented with neon outlines for a futuristic, X-Files style vibe. A perfect transmission of nostalgia."
                         data-product-details-list='["Y2K chrome bubble print","Neon outline accents","Early 00s tech aesthetic","Shipped from USA-based partners"]'
                         data-product-stock-text="> Archive_Access: 18 units."
-                        data-product-stock-class="" /* Pas de classe urgente/low spécifique */
-                        data-paypal-id="NHZNS65SD3HKQ">
+                        data-product-stock-class="" 
+                        data-paypal-link="https://www.paypal.com/ncp/payment/NHZNS65SD3HKQ">
                         <script type="application/ld+json">
-                        { "@context": "https://schema.org/", "@type": "Product", "name": "'RETRO' Chrome Bubble Y2K Tee", "image": "https://tacotypo.com/retoc.png", "description": "'RETRO' in shiny chrome bubble letters with neon outlines, Y2K tech style.", "sku": "TT-YK-003C-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "28.99", "availability": "https://schema.org/InStock", "inventoryLevel": {"@type": "QuantitativeValue", "value": "18"} }}
+                        { "@context": "https://schema.org/", "@type": "Product", "name": "'RETRO' Chrome Bubble Y2K Tee", "image": "https://tacotypo.com/retoc.png", "description": "'RETRO' in shiny chrome bubble letters with neon outlines, Y2K tech style.", "sku": "TT-YK-003C-CB", "brand": {"@type": "Brand", "name": "TacoTypo"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "28.99", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.paypal.com/ncp/payment/NHZNS65SD3HKQ", "inventoryLevel": {"@type": "QuantitativeValue", "value": "18"} }}
                         </script>
                         <div class="product-image-container">
                             <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="retoc.png" alt="TacoTypo Retro Y2K T-Shirt: 'RETRO' Chrome Bubble Letters" width="500" height="500">
@@ -661,7 +662,7 @@
                 <ul id="modalProductDetailsList"></ul>
                 <p id="modalProductStock" class="stock-indicator"></p>
                 <div id="modalPaypalButtonContainer">
-                    <!-- PayPal button form will be injected here by JS -->
+                    <!-- PayPal link/button will be injected here by JS -->
                 </div>
             </div>
         </div>
@@ -784,35 +785,25 @@
             modalProductStock.textContent = productCard.dataset.productStockText;
             modalProductStock.className = `stock-indicator ${productCard.dataset.productStockClass || ''}`;
 
-            const paypalId = productCard.dataset.paypalId;
-            modalPaypalButtonContainer.innerHTML = '';
-            if (paypalId && paypalId.toUpperCase() !== "YOUR_PAYPAL_ID_PLACEHOLDER" && !paypalId.startsWith("YOUR_PAYPAL_ID_")) {
-                const form = document.createElement('form');
-                form.action = "https://www.paypal.com/cgi-bin/webscr";
-                form.method = "post";
-                form.target = "_blank";
+            const paypalLink = productCard.dataset.paypalLink; // Utiliser data-paypal-link
+            modalPaypalButtonContainer.innerHTML = ''; // Vider le conteneur
 
-                const cmdInput = document.createElement('input');
-                cmdInput.type = "hidden"; cmdInput.name = "cmd"; cmdInput.value = "_s-xclick";
-                form.appendChild(cmdInput);
-
-                const hostedButtonIdInput = document.createElement('input');
-                hostedButtonIdInput.type = "hidden"; hostedButtonIdInput.name = "hosted_button_id"; hostedButtonIdInput.value = paypalId;
-                form.appendChild(hostedButtonIdInput);
-
-                const currencyCodeInput = document.createElement('input');
-                currencyCodeInput.type = "hidden"; currencyCodeInput.name = "currency_code"; currencyCodeInput.value = "USD";
-                form.appendChild(currencyCodeInput);
-
-                const buyButton = document.createElement('button');
-                buyButton.type = "submit";
-                buyButton.className = "buy-button-modal";
-                buyButton.textContent = "Acquire_Now();";
-                form.appendChild(buyButton);
+            if (paypalLink && paypalLink.startsWith("https://www.paypal.com/ncp/payment/")) {
+                const buyLinkButton = document.createElement('a');
+                buyLinkButton.href = paypalLink;
+                buyLinkButton.target = "_blank"; // Ouvrir dans un nouvel onglet
+                buyLinkButton.rel = "noopener noreferrer"; // Pour la sécurité
+                buyLinkButton.className = "buy-button-modal"; // Réutiliser le style du bouton
+                buyLinkButton.textContent = "Acquire_Now();";
                 
-                modalPaypalButtonContainer.appendChild(form);
+                modalPaypalButtonContainer.appendChild(buyLinkButton);
             } else {
                  modalPaypalButtonContainer.innerHTML = `<p><em>Purchase_Module_Offline for ${productCard.dataset.productName}</em></p>`;
+                 if (paypalLink) {
+                     console.warn(`Invalid or missing PayPal link for ${productCard.dataset.productName}: ${paypalLink}`);
+                 } else {
+                     console.warn(`Missing PayPal link for ${productCard.dataset.productName}`);
+                 }
             }
 
 
@@ -850,7 +841,7 @@
             }
         });
 
-        console.log("TacoTypo Cyber-Pop v3 (All Products Integrated) initialized. System online.");
+        console.log("TacoTypo Cyber-Pop v3.1 (Direct PayPal Links) initialized. System online.");
     });
     </script>
 </body>
