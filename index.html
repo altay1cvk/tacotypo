@@ -318,8 +318,25 @@
             color: var(--secondary-neon);
             position: absolute; left: 0;
         }
-        .modal-content .stock-indicator { margin-bottom: 1.5rem; }
-        #modalPaypalButtonContainer { margin-top: 1rem; } /* Changement: suppression de form */
+        .modal-content .stock-indicator { margin-bottom: 0.5rem; } /* Adjusted margin */
+        #modalPaypalButtonContainer { margin-top: 1rem; }
+
+        /* Style pour l'offre de livraison */
+        .shipping-offer {
+            font-family: var(--font-tech);
+            font-size: 0.95rem;
+            color: var(--accent-neon);
+            text-align: center;
+            margin-top: 1rem; 
+            margin-bottom: 1rem; 
+            padding: 0.5rem;
+            border: 1px dashed var(--accent-neon);
+            border-radius: var(--border-radius-sm);
+            text-shadow: 0 0 3px var(--accent-neon);
+        }
+        .shipping-offer strong {
+            color: var(--text-light);
+        }
 
 
         /* --- Responsive Design --- */
@@ -869,6 +886,7 @@
                 <h4>// Details_Buffer:</h4>
                 <ul id="modalProductDetailsList"></ul>
                 <p id="modalProductStock" class="stock-indicator"></p>
+                <div id="modalShippingOffer" class="shipping-offer"></div>
                 <div id="modalPaypalButtonContainer">
                     <!-- PayPal link/button will be injected here by JS -->
                 </div>
@@ -961,9 +979,39 @@
         const modalProductDescriptionFull = document.getElementById('modalProductDescriptionFull');
         const modalProductDetailsList = document.getElementById('modalProductDetailsList');
         const modalProductStock = document.getElementById('modalProductStock');
+        const modalShippingOffer = document.getElementById('modalShippingOffer');
         const modalPaypalButtonContainer = document.getElementById('modalPaypalButtonContainer');
         const closeModalButton = modal.querySelector('.modal-close');
         let previouslyFocusedElement;
+
+        let shippingOfferInterval;
+        let shippingOfferEndTime;
+        const offerDurationMinutes = 5; // 5 minutes
+
+        function updateShippingOfferTimer() {
+            const now = Date.now();
+            const timeLeft = shippingOfferEndTime - now;
+
+            if (timeLeft > 0) {
+                const minutes = Math.floor((timeLeft / 1000 / 60) % 60);
+                const seconds = Math.floor((timeLeft / 1000) % 60);
+                modalShippingOffer.innerHTML = `⚡ Order within <strong>${minutes}:${seconds < 10 ? '0' : ''}${seconds}</strong> for <strong>FREE SUPER FAST USA SHIPPING!</strong> ⚡`;
+                modalShippingOffer.style.display = 'block';
+            } else {
+                modalShippingOffer.innerHTML = `Standard USA Shipping (3-5 days).`;
+                modalShippingOffer.style.display = 'block'; 
+                clearInterval(shippingOfferInterval);
+            }
+        }
+
+        function startShippingOfferTimer() {
+            if (shippingOfferInterval) {
+                clearInterval(shippingOfferInterval);
+            }
+            shippingOfferEndTime = Date.now() + offerDurationMinutes * 60 * 1000;
+            updateShippingOfferTimer(); 
+            shippingOfferInterval = setInterval(updateShippingOfferTimer, 1000);
+        }
 
 
         function openModal(productCard) {
@@ -993,16 +1041,18 @@
             modalProductStock.textContent = productCard.dataset.productStockText;
             modalProductStock.className = `stock-indicator ${productCard.dataset.productStockClass || ''}`;
 
-            const paypalLink = productCard.dataset.paypalLink; // Utiliser data-paypal-link
-            modalPaypalButtonContainer.innerHTML = ''; // Vider le conteneur
+            startShippingOfferTimer();
+
+            const paypalLink = productCard.dataset.paypalLink; 
+            modalPaypalButtonContainer.innerHTML = ''; 
 
             if (paypalLink && paypalLink.startsWith("https://www.paypal.com/ncp/payment/")) {
                 const buyLinkButton = document.createElement('a');
                 buyLinkButton.href = paypalLink;
-                buyLinkButton.target = "_blank"; // Ouvrir dans un nouvel onglet
-                buyLinkButton.rel = "noopener noreferrer"; // Pour la sécurité
-                buyLinkButton.className = "buy-button-modal"; // Réutiliser le style du bouton
-                buyLinkButton.textContent = "Acquire_Now();";
+                buyLinkButton.target = "_blank"; 
+                buyLinkButton.rel = "noopener noreferrer"; 
+                buyLinkButton.className = "buy-button-modal"; 
+                buyLinkButton.textContent = "Acquire_Now();"; // You can change this text too if desired
                 
                 modalPaypalButtonContainer.appendChild(buyLinkButton);
             } else {
@@ -1025,6 +1075,15 @@
             modal.classList.remove('active');
             modal.setAttribute('aria-hidden', 'true');
             document.body.classList.remove('modal-open');
+
+            if (shippingOfferInterval) {
+                clearInterval(shippingOfferInterval);
+            }
+            // Optional: Hide or reset shipping offer text on close
+            // modalShippingOffer.style.display = 'none'; 
+            // modalShippingOffer.innerHTML = '';
+
+
             if (previouslyFocusedElement) {
                 previouslyFocusedElement.focus();
             }
@@ -1049,7 +1108,7 @@
             }
         });
 
-        console.log("TacoTypo Cyber-Pop v3.1 (Direct PayPal Links, Enhanced Schemas) initialized. System online.");
+        console.log("TacoTypo Cyber-Pop v3.3 (English Shipping Offer, Timer) initialized. System online.");
     });
     </script>
 </body>
