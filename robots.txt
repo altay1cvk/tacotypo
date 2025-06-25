@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: # Si tu as des pages spécifiques à ne pas indexer (ex: pages admin, paniers inachevés - non applicable ici)
+
+Sitemap: https://tacotypo.com/sitemap.xml
