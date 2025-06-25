@@ -2,23 +2,38 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tacotypo.com/</loc>
-    <lastmod>2025-06-25T00:00:00+00:00</lastmod>
+    <lastmod>2025-06-25T00:00:00+00:00</lastmod> <!-- Mettre à jour lastmod régulièrement -->
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://tacotypo.com/#food-art</loc>
     <lastmod>2025-06-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tacotypo.com/#3d-typography</loc>
     <lastmod>2025-06-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tacotypo.com/#retro-y2k</loc>
     <lastmod>2025-06-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tacotypo.com/#about</loc>
     <lastmod>2025-06-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tacotypo.com/#faq-placeholder</loc> <!-- Ajouté pour la nouvelle section FAQ -->
+    <lastmod>2025-06-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
