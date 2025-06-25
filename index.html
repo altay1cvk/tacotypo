@@ -4,48 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta Tags -->
+    <!-- SEO Meta Tags (Point 1 - Global pour la page d'accueil) -->
     <title>TacoTypo | Cyber-Pop Tees: Food Art, 3D Type & Y2K Glitch (USA)</title>
     <meta name="description" content="Dive into TacoTypo's new wave collection! Unique t-shirts with edgy Food Art, bold 3D Typography, and Y2K Glitch aesthetics. Premium, USA-shipped. Limited stock available.">
     <meta name="keywords" content="TacoTypo, unique t-shirts, cyber-pop apparel, neon tees, glitch art shirts, food art, 3D typography, Y2K retro, graphic t-shirts USA, limited edition, streetwear, donut tee, go big tee, retro chrome tee, t-shirt sizes, oversized fit">
     <meta name="author" content="TacoTypo">
+    
+    <!-- Canonical Tag (Point 9) -->
     <link rel="canonical" href="https://tacotypo.com/">
 
     <link rel="alternate" hreflang="en-US" href="https://tacotypo.com/">
     <link rel="alternate" hreflang="x-default" href="https://tacotypo.com/">
     <!-- Pour une future version FR, vous ajouteriez : <link rel="alternate" hreflang="fr-FR" href="https://tacotypo.com/fr/"> -->
 
+    <!-- Open Graph & Twitter Meta (Point 4 - Global pour la page d'accueil) -->
     <meta property="og:title" content="TacoTypo | Cyber-Pop Tees: Food Art, 3D Type & Y2K Glitch">
     <meta property="og:description" content="TacoTypo's fresh collection: Edgy Food Art, 3D Typography, Y2K Glitch. USA-shipped. Shop limited stock!">
-    <meta property="og:image" content="https://tacotypo.com/assets/images/tacotypo-og-cyber.jpg">
+    <meta property="og:image" content="https://tacotypo.com/assets/images/tacotypo-og-cyber.jpg"> <!-- Placeholder: Remplacer par une image OG réelle -->
     <meta property="og:url" content="https://tacotypo.com/">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TacoTypo | Cyber-Pop Tees">
     <meta name="twitter:description" content="Explore TacoTypo's new wave: Food Art, 3D Type, Y2K Glitch.">
-    <meta name="twitter:image" content="https://tacotypo.com/assets/images/tacotypo-twitter-cyber.jpg">
+    <meta name="twitter:image" content="https://tacotypo.com/assets/images/tacotypo-twitter-cyber.jpg"> <!-- Placeholder: Remplacer par une image Twitter réelle -->
 
-    <!-- Favicon (style Cyber-Pop, chemins directs) -->
+    <!-- Favicon -->
     <link rel="icon" href="favicon-cyber.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="apple-touch-icon-cyber.png">
 
-
-    <!-- Google Fonts (style Cyber-Pop) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Schema.org -->
+    <!-- Schema.org Organization (Complémentaire au Schema Product par article) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "TacoTypo",
       "url": "https://tacotypo.com/",
-      "logo": "https://tacotypo.com/assets/images/tacotypo-logo-cyber.png",
+      "logo": "https://tacotypo.com/assets/images/tacotypo-logo-cyber.png",  <!-- Placeholder: Remplacer par le logo réel -->
       "description": "TacoTypo's unique t-shirts with a cyber-pop aesthetic."
     }
+    </script>
+
+    <!-- Google Analytics (Point 11) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script> <!-- Remplacer UA-XXXXX-Y par votre ID de suivi réel -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config','UA-XXXXX-Y'); // Remplacer UA-XXXXX-Y par votre ID de suivi réel
     </script>
 
     <style>
@@ -85,15 +96,17 @@
         .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 0 15px; }
 
         h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; margin-bottom: 1rem; text-transform: uppercase; }
+        /* H1 de la page (Point 5) */
         h1 { font-size: 2.5rem; color: var(--primary-neon); text-shadow: 0 0 8px var(--primary-neon); letter-spacing: 1px;}
         h2 { font-size: 2rem; color: var(--secondary-neon); text-shadow: 0 0 6px var(--secondary-neon); margin-bottom: 2rem; text-align: center; }
         /* H3 pour la carte produit: .product-info h3 */
-        /* H3 pour la modale: .modal-content h3 */
+        /* H3 pour la modale (nom du produit - Point 5): .modal-content h3 */
 
         a { color: var(--secondary-neon); text-decoration: none; transition: color 0.3s ease, text-shadow 0.3s ease; }
         a:hover { color: var(--accent-neon); text-shadow: 0 0 5px var(--accent-neon); }
 
         img { max-width: 100%; height: auto; display: block; }
+        /* loading="lazy" est géré par JS, mais l'attribut data-src est crucial (Point 7) */
         .lazy { opacity: 0; transition: opacity 0.6s ease-in-out; }
         .lazy-loaded { opacity: 1; }
 
@@ -148,6 +161,7 @@
             background: linear-gradient(rgba(16,16,26,0.7), rgba(16,16,26,0.9));
         }
         .hero .container { position: relative; z-index: 1; }
+        /* H1 principal de la page (Point 5) */
         .hero h1 { font-size: 2.2rem; margin-bottom: 1rem; animation: textGlitch 3s infinite alternate; }
         .hero p {
             font-family: var(--font-tech); font-size: 1.1rem; color: var(--text-medium);
@@ -185,6 +199,7 @@
             grid-template-columns: 1fr;
             gap: 2rem;
         }
+        /* Chaque article est un produit (Point 5) */
         .product-card {
             background-color: var(--bg-medium);
             border: 1px solid rgba(0, 255, 255, 0.3);
@@ -211,11 +226,12 @@
         .product-card:hover img.lazy-loaded { transform: scale(1.08); }
 
         .product-info { padding: 1rem; text-align: center; flex-grow: 1; display: flex; flex-direction: column; }
-        .product-info h3 { font-size: 1.1rem; margin-bottom: 0.5rem; letter-spacing: 0.5px; color: var(--text-light); }
+        .product-info h3 { font-size: 1.1rem; margin-bottom: 0.5rem; letter-spacing: 0.5px; color: var(--text-light); } /* Nom du produit sur la carte */
         .product-price {
             font-family: var(--font-tech); font-size: 1.2rem; font-weight: 700;
             color: var(--accent-neon); margin-bottom: 0.5rem;
         }
+        /* Description courte en <p> (Point 5) */
         .product-description-short {
             font-size: 0.85rem; color: var(--text-medium);
             margin-bottom: 1rem; min-height: 40px; line-height: 1.4;
@@ -236,7 +252,7 @@
             box-shadow: var(--box-shadow-neon-secondary);
             transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
             text-align: center;
-            text-decoration: none; /* Ajouté pour les liens stylisés comme des boutons */
+            text-decoration: none;
         }
         .view-details-button:hover, .buy-button-modal:hover {
             background-color: var(--accent-neon);
@@ -253,6 +269,42 @@
         }
         .about-section h2 { color: var(--primary-neon); text-shadow: 0 0 8px var(--primary-neon); }
         .about-section p { color: var(--text-medium); max-width: 700px; margin: 0 auto 1rem auto; text-align: center; font-size: 0.95rem;}
+
+        /* --- Future Content Sections Placeholder (Points 12 & 13) --- */
+        .future-content-section {
+            padding: 3rem 0;
+        }
+        .future-content-section h2 {
+            color: var(--accent-neon);
+            text-shadow: 0 0 6px var(--accent-neon);
+        }
+        .faq-item {
+            background-color: var(--bg-medium);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius-sm);
+            border: 1px solid rgba(var(--secondary-neon), 0.2);
+        }
+        .faq-item h3 {
+            font-family: var(--font-tech);
+            color: var(--secondary-neon);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .faq-item p {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+        }
+        .partner-links-placeholder {
+            text-align: center;
+            font-family: var(--font-tech);
+            color: var(--text-medium);
+        }
+        .partner-links-placeholder a {
+            margin: 0 0.5rem;
+        }
+        /* --- End Future Content Sections Placeholder --- */
+
 
         /* --- Footer --- */
         .site-footer { padding: 3rem 0 1.5rem; text-align: center; }
@@ -304,10 +356,13 @@
             border-radius: var(--border-radius-sm);
             border: 1px solid rgba(0,255,255,0.2);
         }
+        /* Nom du produit dans la modale, H3 est approprié (Point 5) */
         .modal-content h3 { font-size: 1.5rem; color: var(--primary-neon); margin-bottom: 0.5rem; font-family: var(--font-display); }
         .modal-content .product-price { font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent-neon); font-family: var(--font-tech); }
+        /* Description complète en <p> (Point 5) */
         .modal-content .product-description-full { font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem; line-height: 1.5; font-family: var(--font-body); }
         .modal-content h4 { font-family: var(--font-tech); font-size: 1rem; color: var(--secondary-neon); margin-top: 1.5rem; margin-bottom: 0.75rem;}
+        /* Détails en liste <ul> (Point 5) */
         .modal-content ul { list-style: none; padding-left: 0; margin-bottom: 1rem; }
         .modal-content ul li {
             font-size: 0.9rem; color: var(--text-medium); margin-bottom: 0.3rem; font-family: var(--font-body);
@@ -337,7 +392,6 @@
             color: var(--text-light);
         }
 
-        /* --- STYLES MODIFIÉS/AJOUTÉS: Options de taille et Guide des tailles --- */
         .size-options {
             display: flex;
             flex-wrap: wrap;
@@ -352,17 +406,17 @@
             border: 1px solid var(--secondary-neon);
             padding: 0.5rem 0.8rem;
             border-radius: var(--border-radius-sm);
-            cursor: pointer; /* MODIFIÉ */
+            cursor: pointer;
             text-transform: uppercase;
             transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s;
         }
         .size-option-button:hover {
             background-color: var(--secondary-neon);
             color: var(--bg-dark);
-            border-color: var(--secondary-neon); /* S'assurer que la bordure change aussi au survol */
+            border-color: var(--secondary-neon);
             box-shadow: var(--box-shadow-neon-secondary);
         }
-        .size-option-button.selected { /* AJOUTÉ */
+        .size-option-button.selected {
             background-color: var(--accent-neon);
             color: var(--bg-dark);
             border-color: var(--accent-neon);
@@ -446,12 +500,13 @@
             <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation">
                 ☰
             </button>
-            <nav class="main-nav" id="main-navigation">
+            <nav class="main-nav" id="main-navigation"> <!-- Navigation interne (Point 6) -->
                 <ul>
                     <li><a href="#food-art" class="nav-link">Food Art</a></li>
                     <li><a href="#3d-typography" class="nav-link">3D Type</a></li>
                     <li><a href="#retro-y2k" class="nav-link">Y2K Glitch</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#faq-placeholder" class="nav-link">FAQ</a></li> <!-- Lien vers placeholder FAQ -->
                 </ul>
             </nav>
         </div>
@@ -459,7 +514,7 @@
 
     <section id="hero" class="hero">
         <div class="container">
-            <h1>Code Your Style.</h1>
+            <h1>Code Your Style.</h1> <!-- H1 principal de la page (Point 5) -->
             <p>TacoTypo_v2: Fresh drops of Food Art, 3D Typography & Y2K Glitch tees. Limited batches. USA fulfillment protocol active.</p>
             <a href="#food-art" class="cta-button">Explore Collection_</a>
         </div>
@@ -483,36 +538,35 @@
                         data-product-details-list='["Premium soft cotton","Durable, high-resolution print","Unique cyber-pop design","Slightly oversized fit","Shipped from USA-based partners"]'
                         data-product-stock-text="> Execute_Order: 8 units remaining!"
                         data-product-stock-class="urgent"
-                        data-paypal-link="https://www.paypal.com/ncp/payment/NFK6LJ27ZYSF8">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/NFK6LJ27ZYSF8"
+                        data-product-sku="TT-FA-001A-CB-OS"
+                        data-product-stock-number="8"
+                        data-product-category="Food Art">
+                        <!-- JSON-LD / Schema Product (Point 3) -->
                         <script type="application/ld+json">
                         {
                           "@context": "https://schema.org/",
                           "@type": "Product",
                           "name": "Avocado Glitch Tee (Oversized Fit)",
-                          "image": ["https://tacotypo.com/foodarta.png"],
-                          "description": "Limited edition Avocado Glitch t-shirt featuring a smiling avocado with a vibrant food art glitch design. Premium cotton. Slightly oversized fit. $27.99. Fast USA shipping.",
-                          "sku": "TT-FA-001A-CB-OS",
-                          "brand": {
-                            "@type": "Brand",
-                            "name": "TacoTypo"
-                          },
-                          "offers": {
-                            "@type": "Offer",
-                            "priceCurrency": "USD",
-                            "price": "27.99",
-                            "availability": "https://schema.org/InStock",
-                            "itemCondition": "https://schema.org/NewCondition",
-                            "url": "https://www.paypal.com/ncp/payment/NFK6LJ27ZYSF8",
-                            "inventoryLevel": {
-                              "@type": "QuantitativeValue",
-                              "value": "8"
-                            }
+                          "image": ["https://tacotypo.com/foodarta.png"], /* [[image]] placeholder remplacé par data-product-image */
+                          "description": "Avocado_Glitch.tee – Smiling avocado signal corrupted. Deliciously unstable vector. (Oversized Fit). $27.99 USD. Fast USA shipping. Limited stock: 8 units.", /* [[description]] + [[prix]] + stock etc. */
+                          "sku": "TT-FA-001A-CB-OS", /* [[SKU]] */
+                          "category": "Food Art T-Shirt", /* [[Catégorie]] T-Shirt */
+                          "brand": {"@type":"Brand","name":"TacoTypo"},
+                          "offers":{
+                            "@type":"Offer",
+                            "url":"https://www.paypal.com/ncp/payment/NFK6LJ27ZYSF8", /* [[slug]] ou lien d'achat. Pour une page unique, le lien d'achat est pertinent. */
+                            "priceCurrency":"USD",
+                            "price":"27.99", /* [[price]] */
+                            "availability":"https://schema.org/InStock",
+                            "itemCondition":"https://schema.org/NewCondition",
+                            "inventoryLevel":{"@type":"QuantitativeValue","value":"8"} /* [[stockNumber]] */
                           },
                           "size": ["XS", "S", "M", "L", "XL", "XXL"]
                         }
                         </script>
                         <div class="product-image-container">
-                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="foodarta.png" alt="TacoTypo Food Art T-Shirt: Smiling Avocado with Glitch Effect" width="500" height="500">
+                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="foodarta.png" alt="TacoTypo Food Art T-Shirt: Smiling Avocado with Glitch Effect" width="500" height="500" loading="lazy"> <!-- loading="lazy" (Point 7) -->
                         </div>
                         <div class="product-info">
                             <h3>Avocado_Glitch.tee</h3><p class="product-price">$27.99 USD</p><p class="product-description-short">Smiling avocado signal corrupted. Deliciously unstable vector. (Oversized Fit)</p><p class="stock-indicator urgent">> Execute_Order: 8 units remaining!</p>
@@ -532,20 +586,20 @@
                         data-product-details-list='["Premium soft cotton","Vibrant, long-lasting print","Cyber-minimalist aesthetic","Slightly oversized fit","Shipped from USA-based partners"]'
                         data-product-stock-text="> Low_Supply: 14 units detected."
                         data-product-stock-class="low"
-                        data-paypal-link="https://www.paypal.com/ncp/payment/79SUNDJLZN4WY">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/79SUNDJLZN4WY"
+                        data-product-sku="TT-FA-001B-CB-OS"
+                        data-product-stock-number="14"
+                        data-product-category="Food Art">
                          <script type="application/ld+json">
                         {
                           "@context": "https://schema.org/",
                           "@type": "Product",
                           "name": "Coffee Heartbeat Tee (Oversized Fit)",
-                          "image": ["https
-://tacotypo.com/foodartb.png"],
-                          "description": "Minimalist neon coffee cup design with EKG heartbeat steam. Fuel your day with this unique Food Art t-shirt. Slightly oversized fit. $27.99. Fast USA shipping.",
+                          "image": ["https://tacotypo.com/foodartb.png"],
+                          "description": "Coffee_Heartbeat.tee – Minimalist cup, heart steam pulsing neon EKG. Fuel sequence initiated. (Oversized Fit). $27.99 USD. Fast USA shipping. Limited stock: 14 units.",
                           "sku": "TT-FA-001B-CB-OS",
-                          "brand": {
-                            "@type": "Brand",
-                            "name": "TacoTypo"
-                          },
+                          "category": "Food Art T-Shirt",
+                          "brand": {"@type": "Brand", "name": "TacoTypo"},
                           "offers": {
                             "@type": "Offer",
                             "priceCurrency": "USD",
@@ -553,16 +607,13 @@
                             "availability": "https://schema.org/InStock",
                             "itemCondition": "https://schema.org/NewCondition",
                             "url": "https://www.paypal.com/ncp/payment/79SUNDJLZN4WY",
-                            "inventoryLevel": {
-                              "@type": "QuantitativeValue",
-                              "value": "14"
-                            }
+                            "inventoryLevel": {"@type": "QuantitativeValue", "value": "14"}
                           },
                           "size": ["XS", "S", "M", "L", "XL", "XXL"]
                         }
                         </script>
                         <div class="product-image-container">
-                             <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="foodartb.png" alt="TacoTypo Food Art T-Shirt: Neon Coffee Cup Heartbeat" width="500" height="500">
+                             <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="foodartb.png" alt="TacoTypo Food Art T-Shirt: Neon Coffee Cup Heartbeat" width="500" height="500" loading="lazy">
                         </div>
                         <div class="product-info">
                             <h3>Coffee_Heartbeat.tee</h3><p class="product-price">$27.99 USD</p><p class="product-description-short">Minimalist cup, heart steam pulsing neon EKG. Fuel sequence initiated. (Oversized Fit)</p><p class="stock-indicator low">> Low_Supply: 14 units detected.</p>
@@ -570,7 +621,7 @@
                         </div>
                     </article>
 
-                    <!-- AJOUTÉ: Food Art C: Donut Bite -->
+                    <!-- Food Art C: Donut Bite -->
                     <article class="product-card"
                         data-product-id="food-art-c"
                         data-product-name="Donut_Havoc.tee"
@@ -582,37 +633,34 @@
                         data-product-details-list='["Premium soft cotton","High-resolution glitch print","Playful cyber-donut design","Slightly oversized fit","Shipped from USA-based partners"]'
                         data-product-stock-text="> Glitch_Stock: 10 units available."
                         data-product-stock-class="low"
-                        data-paypal-link="https://www.paypal.com/ncp/payment/BM3S6SSBUHGEU">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/BM3S6SSBUHGEU"
+                        data-product-sku="TT-FA-001C-CB-OS"
+                        data-product-stock-number="10"
+                        data-product-category="Food Art">
                         <script type="application/ld+json">
                         {
                           "@context": "https://schema.org/",
                           "@type": "Product",
                           "name": "Donut Havoc Tee (Oversized Fit)",
                           "image": ["https://tacotypo.com/foodartc.png"],
-                          "description": "Playful pink donut with a glitchy bite and chaotic sprinkles. Sweet cyber-pop food art t-shirt. Slightly oversized fit. $27.99. Fast USA shipping.",
+                          "description": "Donut_Havoc.tee – Pink donut, glitchy bite & chaotic sprinkles. Sweet system error. (Oversized Fit). $27.99 USD. Fast USA shipping. Limited stock: 10 units.",
                           "sku": "TT-FA-001C-CB-OS",
-                          "brand": {
-                            "@type": "Brand",
-                            "name": "TacoTypo"
-                          },
+                          "category": "Food Art T-Shirt",
+                          "brand": {"@type": "Brand", "name": "TacoTypo"},
                           "offers": {
                             "@type": "Offer",
                             "priceCurrency": "USD",
                             "price": "27.99",
                             "availability": "https://schema.org/InStock",
-                            "itemCondition": "https
-://schema.org/NewCondition",
+                            "itemCondition": "https://schema.org/NewCondition",
                             "url": "https://www.paypal.com/ncp/payment/BM3S6SSBUHGEU",
-                            "inventoryLevel": {
-                              "@type": "QuantitativeValue",
-                              "value": "10"
-                            }
+                            "inventoryLevel": {"@type": "QuantitativeValue", "value": "10"}
                           },
                           "size": ["XS", "S", "M", "L", "XL", "XXL"]
                         }
                         </script>
                         <div class="product-image-container">
-                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="foodartc.png" alt="TacoTypo Food Art T-Shirt: Donut with Bite and Sprinkles - Cyber Glitch" width="500" height="500">
+                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="foodartc.png" alt="TacoTypo Food Art T-Shirt: Donut with Bite and Sprinkles - Cyber Glitch" width="500" height="500" loading="lazy">
                         </div>
                         <div class="product-info">
                             <h3>Donut_Havoc.tee</h3><p class="product-price">$27.99 USD</p><p class="product-description-short">Pink donut, glitchy bite & chaotic sprinkles. Sweet system error. (Oversized Fit)</p><p class="stock-indicator low">> Glitch_Stock: 10 units available.</p>
@@ -639,19 +687,20 @@
                         data-product-details-list='["100% Airlume combed cotton","High-fidelity 3D effect print","Futuristic typographic design","Slightly oversized fit","Shipped from USA-based partners"]'
                         data-product-stock-text="> Alert_Stock_Low: 11 units."
                         data-product-stock-class="low"
-                        data-paypal-link="https://www.paypal.com/ncp/payment/RZHKJ8SSU4WL6">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/RZHKJ8SSU4WL6"
+                        data-product-sku="TT-3D-002A-CB-OS"
+                        data-product-stock-number="11"
+                        data-product-category="3D Typography">
                         <script type="application/ld+json">
                         {
                           "@context": "https://schema.org/",
                           "@type": "Product",
                           "name": "Fuel Matrix 3D Tee (Oversized Fit)",
                           "image": ["https://tacotypo.com/3dtypoa.png"],
-                          "description": "Bold 'Fuel Your Day' 3D neon typography t-shirt with a captivating matrix depth effect. Slightly oversized fit. $29.99. Fast USA shipping.",
+                          "description": "Fuel_Matrix_3D.tee – 'Fuel Your Day' rendered in 3D neon, matrix depth effect. (Oversized Fit). $29.99 USD. Fast USA shipping. Limited stock: 11 units.",
                           "sku": "TT-3D-002A-CB-OS",
-                          "brand": {
-                            "@type": "Brand",
-                            "name": "TacoTypo"
-                          },
+                          "category": "3D Typography T-Shirt",
+                          "brand": {"@type": "Brand", "name": "TacoTypo"},
                           "offers": {
                             "@type": "Offer",
                             "priceCurrency": "USD",
@@ -659,16 +708,13 @@
                             "availability": "https://schema.org/InStock",
                             "itemCondition": "https://schema.org/NewCondition",
                             "url": "https://www.paypal.com/ncp/payment/RZHKJ8SSU4WL6",
-                            "inventoryLevel": {
-                              "@type": "QuantitativeValue",
-                              "value": "11"
-                            }
+                            "inventoryLevel": {"@type": "QuantitativeValue", "value": "11"}
                           },
                           "size": ["XS", "S", "M", "L", "XL", "XXL"]
                         }
                         </script>
                         <div class="product-image-container">
-                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="3dtypoa.png" alt="TacoTypo 3D Typography T-Shirt: 'Fuel Your Day' Neon Matrix" width="500" height="500">
+                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="3dtypoa.png" alt="TacoTypo 3D Typography T-Shirt: 'Fuel Your Day' Neon Matrix" width="500" height="500" loading="lazy">
                         </div>
                         <div class="product-info">
                             <h3>Fuel_Matrix_3D.tee</h3><p class="product-price">$29.99 USD</p><p class="product-description-short">'Fuel Your Day' rendered in 3D neon, matrix depth effect. (Oversized Fit)</p><p class="stock-indicator low">> Alert_Stock_Low: 11 units.</p>
@@ -686,19 +732,20 @@
                         data-product-details-list='["Premium soft feel cotton blend","Reflective chrome-effect print","Bold 3D typographic art","Slightly oversized fit","Shipped from USA-based partners"]'
                         data-product-stock-text="> Critical_Stock: 7 units!"
                         data-product-stock-class="urgent"
-                        data-paypal-link="https://www.paypal.com/ncp/payment/3DV2JZ4G2X5EY">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/3DV2JZ4G2X5EY"
+                        data-product-sku="TT-3D-002B-CB-OS"
+                        data-product-stock-number="7"
+                        data-product-category="3D Typography">
                         <script type="application/ld+json">
                         {
                           "@context": "https://schema.org/",
                           "@type": "Product",
                           "name": "Vibes Chrome 3D Tee (Oversized Fit)",
                           "image": ["https://tacotypo.com/3dtypob.png"],
-                          "description": "Chunky 'VIBES' 3D chrome typography with a raw cybernetic render. Make a bold statement. Slightly oversized fit. $29.99. Fast USA shipping.",
+                          "description": "Vibes_Chrome_3D.tee – 'VIBES' as chunky 3D chrome. Cybernetic render, raw output. (Oversized Fit). $29.99 USD. Fast USA shipping. Limited stock: 7 units.",
                           "sku": "TT-3D-002B-CB-OS",
-                          "brand": {
-                            "@type": "Brand",
-                            "name": "TacoTypo"
-                          },
+                          "category": "3D Typography T-Shirt",
+                          "brand": {"@type": "Brand", "name": "TacoTypo"},
                           "offers": {
                             "@type": "Offer",
                             "priceCurrency": "USD",
@@ -706,16 +753,13 @@
                             "availability": "https://schema.org/InStock",
                             "itemCondition": "https://schema.org/NewCondition",
                             "url": "https://www.paypal.com/ncp/payment/3DV2JZ4G2X5EY",
-                            "inventoryLevel": {
-                              "@type": "QuantitativeValue",
-                              "value": "7"
-                            }
+                            "inventoryLevel": {"@type": "QuantitativeValue", "value": "7"}
                           },
                           "size": ["XS", "S", "M", "L", "XL", "XXL"]
                         }
                         </script>
                         <div class="product-image-container">
-                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="3dtypob.png" alt="TacoTypo 3D Typography T-Shirt: 'VIBES' Chrome Render" width="500" height="500">
+                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="3dtypob.png" alt="TacoTypo 3D Typography T-Shirt: 'VIBES' Chrome Render" width="500" height="500" loading="lazy">
                         </div>
                         <div class="product-info">
                             <h3>Vibes_Chrome_3D.tee</h3><p class="product-price">$29.99 USD</p><p class="product-description-short">'VIBES' as chunky 3D chrome. Cybernetic render, raw output. (Oversized Fit)</p><p class="stock-indicator urgent">> Critical_Stock: 7 units!</p>
@@ -723,7 +767,7 @@
                         </div>
                     </article>
 
-                    <!-- AJOUTÉ: 3D Typography C: GO BIG Bevel -->
+                    <!-- 3D Typography C: GO BIG Bevel -->
                     <article class="product-card"
                         data-product-id="3d-typo-c"
                         data-product-name="Go_BIG_Protocol.tee"
@@ -735,19 +779,20 @@
                         data-product-details-list='["Impactful 3D bevel print","Vibrant cyan gradient","Bold statement typography","Slightly oversized fit","Shipped from USA-based partners"]'
                         data-product-stock-text="> Max_Output: 15 units."
                         data-product-stock-class=""
-                        data-paypal-link="https://www.paypal.com/ncp/payment/5SHRHDVDR3MNE">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/5SHRHDVDR3MNE"
+                        data-product-sku="TT-3D-002C-CB-OS"
+                        data-product-stock-number="15"
+                        data-product-category="3D Typography">
                         <script type="application/ld+json">
                         {
                           "@context": "https://schema.org/",
                           "@type": "Product",
                           "name": "GO BIG Protocol 3D Tee (Oversized Fit)",
                           "image": ["https://tacotypo.com/3dtypoc.png"],
-                          "description": "Impactful 'GO BIG' 3D bevel and emboss typography in a vibrant cyan gradient. Command attention. Slightly oversized fit. $29.99. Fast USA shipping.",
+                          "description": "Go_BIG_Protocol.tee – 'GO BIG' in cyan 3D bevel. Command execution ready. (Oversized Fit). $29.99 USD. Fast USA shipping. Limited stock: 15 units.",
                           "sku": "TT-3D-002C-CB-OS",
-                          "brand": {
-                            "@type": "Brand",
-                            "name": "TacoTypo"
-                          },
+                          "category": "3D Typography T-Shirt",
+                          "brand": {"@type": "Brand", "name": "TacoTypo"},
                           "offers": {
                             "@type": "Offer",
                             "priceCurrency": "USD",
@@ -755,16 +800,13 @@
                             "availability": "https://schema.org/InStock",
                             "itemCondition": "https://schema.org/NewCondition",
                             "url": "https://www.paypal.com/ncp/payment/5SHRHDVDR3MNE",
-                            "inventoryLevel": {
-                              "@type": "QuantitativeValue",
-                              "value": "15"
-                            }
+                            "inventoryLevel": {"@type": "QuantitativeValue", "value": "15"}
                           },
                           "size": ["XS", "S", "M", "L", "XL", "XXL"]
                         }
                         </script>
                         <div class="product-image-container">
-                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="3dtypoc.png" alt="TacoTypo 3D Typography T-Shirt: 'GO BIG' - Cyan Bevel" width="500" height="500">
+                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="3dtypoc.png" alt="TacoTypo 3D Typography T-Shirt: 'GO BIG' - Cyan Bevel" width="500" height="500" loading="lazy">
                         </div>
                         <div class="product-info">
                             <h3>Go_BIG_Protocol.tee</h3><p class="product-price">$29.99 USD</p><p class="product-description-short">'GO BIG' in cyan 3D bevel. Command execution ready. (Oversized Fit)</p><p class="stock-indicator">> Max_Output: 15 units.</p>
@@ -791,20 +833,20 @@
                         data-product-details-list='["Soft, breathable cotton","Y2K glitch art print","Nostalgic yet futuristic","Slightly oversized fit","Shipped from USA-based partners"]'
                         data-product-stock-text="> Execute_Purchase: 9 left."
                         data-product-stock-class="urgent"
-                        data-paypal-link="https://www.paypal.com/ncp/payment/E8Z27EHLMCUV4">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/E8Z27EHLMCUV4"
+                        data-product-sku="TT-YK-003A-CB-OS"
+                        data-product-stock-number="9"
+                        data-product-category="Y2K Glitch">
                         <script type="application/ld+json">
                         {
-                          "@context": "https
-://schema.org/",
+                          "@context": "https://schema.org/",
                           "@type": "Product",
                           "name": "GeoNet Glitch Y2K Tee (Oversized Fit)",
                           "image": ["https://tacotypo.com/retoa.png"],
-                          "description": "Y2K aesthetic with geometric neon lines, digitally corrupted for a datamosh visual. Retro-futuristic. Slightly oversized fit. $28.99. Fast USA shipping.",
+                          "description": "GeoNet_Glitch.tee – Y2K geo-neon lines, corrupted by digital artifacts. Future past. (Oversized Fit). $28.99 USD. Fast USA shipping. Limited stock: 9 units.",
                           "sku": "TT-YK-003A-CB-OS",
-                          "brand": {
-                            "@type": "Brand",
-                            "name": "TacoTypo"
-                          },
+                          "category": "Y2K Glitch T-Shirt",
+                          "brand": {"@type": "Brand", "name": "TacoTypo"},
                           "offers": {
                             "@type": "Offer",
                             "priceCurrency": "USD",
@@ -812,16 +854,13 @@
                             "availability": "https://schema.org/InStock",
                             "itemCondition": "https://schema.org/NewCondition",
                             "url": "https://www.paypal.com/ncp/payment/E8Z27EHLMCUV4",
-                            "inventoryLevel": {
-                              "@type": "QuantitativeValue",
-                              "value": "9"
-                            }
+                            "inventoryLevel": {"@type": "QuantitativeValue", "value": "9"}
                           },
                           "size": ["XS", "S", "M", "L", "XL", "XXL"]
                         }
                         </script>
                         <div class="product-image-container">
-                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="retoa.png" alt="TacoTypo Retro Y2K T-Shirt: Geometric Neon Glitch Lines" width="500" height="500">
+                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="retoa.png" alt="TacoTypo Retro Y2K T-Shirt: Geometric Neon Glitch Lines" width="500" height="500" loading="lazy">
                         </div>
                         <div class="product-info">
                             <h3>GeoNet_Glitch.tee</h3><p class="product-price">$28.99 USD</p><p class="product-description-short">Y2K geo-neon lines, corrupted by digital artifacts. Future past. (Oversized Fit)</p><p class="stock-indicator urgent">> Execute_Purchase: 9 left.</p>
@@ -839,19 +878,20 @@
                         data-product-details-list='["Comfortable cotton fabric","Pixel art glitch design","Vibrant neon colors","Slightly oversized fit","Shipped from USA-based partners"]'
                         data-product-stock-text="> Warning_Stock_Low: 12 units."
                         data-product-stock-class="low"
-                        data-paypal-link="https://www.paypal.com/ncp/payment/8PAC3XV2WAWZ2">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/8PAC3XV2WAWZ2"
+                        data-product-sku="TT-YK-003B-CB-OS"
+                        data-product-stock-number="12"
+                        data-product-category="Y2K Glitch">
                         <script type="application/ld+json">
                         {
                           "@context": "https://schema.org/",
                           "@type": "Product",
                           "name": "GameOn Corrupt Y2K Tee (Oversized Fit)",
                           "image": ["https://tacotypo.com/retob.png"],
-                          "description": "90s 'GAME ON' pixel art with an unstable data stream corruption effect. Vibrant neon palette. Slightly oversized fit. $28.99. Fast USA shipping.",
+                          "description": "GameOn_Corrupt.tee – 90s 'GAME ON' pixel art. Data stream unstable. Neon palette. (Oversized Fit). $28.99 USD. Fast USA shipping. Limited stock: 12 units.",
                           "sku": "TT-YK-003B-CB-OS",
-                          "brand": {
-                            "@type": "Brand",
-                            "name": "TacoTypo"
-                          },
+                          "category": "Y2K Glitch T-Shirt",
+                          "brand": {"@type": "Brand", "name": "TacoTypo"},
                           "offers": {
                             "@type": "Offer",
                             "priceCurrency": "USD",
@@ -859,16 +899,13 @@
                             "availability": "https://schema.org/InStock",
                             "itemCondition": "https://schema.org/NewCondition",
                             "url": "https://www.paypal.com/ncp/payment/8PAC3XV2WAWZ2",
-                            "inventoryLevel": {
-                              "@type": "QuantitativeValue",
-                              "value": "12"
-                            }
+                            "inventoryLevel": {"@type": "QuantitativeValue", "value": "12"}
                           },
                           "size": ["XS", "S", "M", "L", "XL", "XXL"]
                         }
                         </script>
                         <div class="product-image-container">
-                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="retob.png" alt="TacoTypo Retro Y2K T-Shirt: 'GAME ON' Pixel Glitch" width="500" height="500">
+                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="retob.png" alt="TacoTypo Retro Y2K T-Shirt: 'GAME ON' Pixel Glitch" width="500" height="500" loading="lazy">
                         </div>
                         <div class="product-info">
                             <h3>GameOn_Corrupt.tee</h3><p class="product-price">$28.99 USD</p><p class="product-description-short">90s 'GAME ON' pixel art. Data stream unstable. Neon palette. (Oversized Fit)</p><p class="stock-indicator low">> Warning_Stock_Low: 12 units.</p>
@@ -876,7 +913,7 @@
                         </div>
                     </article>
 
-                    <!-- AJOUTÉ: Retro Y2K C: RETRO Chrome Bubble -->
+                    <!-- Retro Y2K C: RETRO Chrome Bubble -->
                     <article class="product-card"
                         data-product-id="retro-y2k-c"
                         data-product-name="Chrome_Bubble_Retro.tee"
@@ -888,19 +925,20 @@
                         data-product-details-list='["Y2K chrome bubble print","Neon outline accents","Early 00s tech aesthetic","Slightly oversized fit","Shipped from USA-based partners"]'
                         data-product-stock-text="> Archive_Access: 18 units."
                         data-product-stock-class=""
-                        data-paypal-link="https://www.paypal.com/ncp/payment/NHZNS65SD3HKQ">
+                        data-paypal-link="https://www.paypal.com/ncp/payment/NHZNS65SD3HKQ"
+                        data-product-sku="TT-YK-003C-CB-OS"
+                        data-product-stock-number="18"
+                        data-product-category="Y2K Glitch">
                         <script type="application/ld+json">
                         {
                           "@context": "https://schema.org/",
                           "@type": "Product",
                           "name": "Chrome Bubble Retro Y2K Tee (Oversized Fit)",
                           "image": ["https://tacotypo.com/retoc.png"],
-                          "description": "Shiny 'RETRO' chrome bubble letters with neon outlines, inspired by early 2000s tech aesthetics. Slightly oversized fit. $28.99. Fast USA shipping.",
+                          "description": "Chrome_Bubble_Retro.tee – 'RETRO' in Y2K chrome bubble. Neon outlines. X-Files aesthetic. (Oversized Fit). $28.99 USD. Fast USA shipping. Limited stock: 18 units.",
                           "sku": "TT-YK-003C-CB-OS",
-                          "brand": {
-                            "@type": "Brand",
-                            "name": "TacoTypo"
-                          },
+                          "category": "Y2K Glitch T-Shirt",
+                          "brand": {"@type": "Brand", "name": "TacoTypo"},
                           "offers": {
                             "@type": "Offer",
                             "priceCurrency": "USD",
@@ -908,16 +946,13 @@
                             "availability": "https://schema.org/InStock",
                             "itemCondition": "https://schema.org/NewCondition",
                             "url": "https://www.paypal.com/ncp/payment/NHZNS65SD3HKQ",
-                            "inventoryLevel": {
-                              "@type": "QuantitativeValue",
-                              "value": "18"
-                            }
+                            "inventoryLevel": {"@type": "QuantitativeValue", "value": "18"}
                           },
                           "size": ["XS", "S", "M", "L", "XL", "XXL"]
                         }
                         </script>
                         <div class="product-image-container">
-                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="retoc.png" alt="TacoTypo Retro Y2K T-Shirt: 'RETRO' Chrome Bubble Letters" width="500" height="500">
+                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="retoc.png" alt="TacoTypo Retro Y2K T-Shirt: 'RETRO' Chrome Bubble Letters" width="500" height="500" loading="lazy">
                         </div>
                         <div class="product-info">
                             <h3>Chrome_Bubble_Retro.tee</h3><p class="product-price">$28.99 USD</p><p class="product-description-short">'RETRO' in Y2K chrome bubble. Neon outlines. X-Files aesthetic. (Oversized Fit)</p><p class="stock-indicator">> Archive_Access: 18 units.</p>
@@ -937,6 +972,38 @@
                 <p>TacoTypo_OS guarantees high-res print quality on durable textile substrates. User satisfaction is priority one. Injecting fun_module into daily_wear_protocol. End_Transmission.</p>
             </div>
         </section>
+
+        <!-- Placeholder for FAQ and Backlinks (Points 12 & 13) -->
+        <section id="faq-placeholder" class="future-content-section">
+            <div class="container">
+                <h2 class="section-title">// Future_Data_Streams</h2>
+                
+                <!-- FAQ Placeholder (Point 12) -->
+                <h3>FAQ_Matrix</h3>
+                <div class="faq-item">
+                  <h3>Is this t-shirt machine washable?</h3>
+                  <p>Yes, all TacoTypo tees are machine-washable. We recommend washing cold, inside-out, with like colors. Tumble dry low or hang dry for longevity.</p>
+                </div>
+                <div class="faq-item">
+                  <h3>What's the return policy?</h3>
+                  <p>Due to our print-on-demand model, we can only accept returns for defective items or printing errors. Please contact_node within 14 days of receipt.</p>
+                </div>
+                <!-- Add more FAQ items as needed -->
+
+                <br><br>
+
+                <!-- Backlinks/Partners Placeholder (Point 13) -->
+                <h3>// External_Signal_Boosters (Featured In / Partners)</h3>
+                <div class="partner-links-placeholder">
+                    <p><em>Zone_Under_Construction: Check back for links to our awesome partners, media features, and community collaborations!</em></p>
+                    <!-- Example: <a href="[URL_PARTENAIRE]" target="_blank" rel="noopener noreferrer">Featured in XYZ_Mag</a> -->
+                    <!-- Example: <a href="[URL_ARTICLE_INVITE]" target="_blank" rel="noopener noreferrer">Guest post on DesignBlog.io</a> -->
+                </div>
+            </div>
+        </section>
+        <!-- End Placeholder -->
+
+
     </main>
 
     <footer class="site-footer">
@@ -962,10 +1029,13 @@
             <button class="modal-close" aria-label="Close modal">×</button>
             <div class="modal-content">
                 <img id="modalImage" src="" alt="" class="modal-product-image">
+                <!-- Nom du produit dans la modale, H3 (Point 5) -->
                 <h3 id="modalProductName"></h3>
                 <p id="modalProductPrice" class="product-price"></p>
+                <!-- Description complète en <p> (Point 5) -->
                 <p id="modalProductDescriptionFull" class="product-description-full"></p>
                 <h4>// Details_Buffer:</h4>
+                <!-- Détails en liste <ul> (Point 5) -->
                 <ul id="modalProductDetailsList"></ul>
 
                 <h4>// Size_Selector:</h4>
@@ -1060,7 +1130,7 @@
         const currentYearSpan = document.getElementById('currentYear');
         if (currentYearSpan) currentYearSpan.textContent = new Date().getFullYear();
 
-        // Lazy Loading Images & Scroll Animations for Product Cards
+        // Lazy Loading Images & Scroll Animations for Product Cards (Point 7 - loading="lazy")
         const elementsToObserve = document.querySelectorAll('img.lazy, .product-card');
         if ("IntersectionObserver" in window) {
             const observer = new IntersectionObserver((entries, observerInstance) => {
@@ -1079,7 +1149,7 @@
                 });
             }, { rootMargin: "0px 0px -50px 0px" });
             elementsToObserve.forEach(el => observer.observe(el));
-        } else {
+        } else { // Fallback for older browsers
             elementsToObserve.forEach(el => {
                 if (el.classList.contains('lazy')) {
                     el.src = el.dataset.src;
@@ -1104,22 +1174,16 @@
         const closeModalButton = modal.querySelector('.modal-close');
         let previouslyFocusedElement;
 
-        // --- MODIFIÉ/AJOUTÉ: Logique pour les boutons de taille ---
         const modalSizeButtons = modal.querySelectorAll('.size-option-button');
-        let currentSelectedSize = null; // Pour potentiellement stocker la taille
+        let currentSelectedSize = null;
 
         modalSizeButtons.forEach(button => {
             button.addEventListener('click', function() {
                 modalSizeButtons.forEach(btn => btn.classList.remove('selected'));
                 this.classList.add('selected');
                 currentSelectedSize = this.dataset.size;
-                // console.log("Selected size:", currentSelectedSize);
-                // Si vous aviez des liens PayPal différents par taille, vous les mettriez à jour ici.
-                // Par exemple: updatePaypalLinkForSize(currentSelectedSize);
             });
         });
-        // --- FIN MODIFIÉ/AJOUTÉ ---
-
 
         let shippingOfferInterval;
         let shippingOfferEndTime;
@@ -1152,7 +1216,7 @@
 
             modalImage.src = productCard.dataset.productImage;
             modalImage.alt = productCard.dataset.productAlt;
-            modalProductName.textContent = productCard.dataset.productName;
+            modalProductName.textContent = productCard.dataset.productName; // Sera le H1 de la modale pour SEO (Point 5)
             modalProductPrice.textContent = productCard.dataset.productPrice;
             modalProductDescriptionFull.textContent = productCard.dataset.productDescriptionFull;
 
@@ -1191,15 +1255,13 @@
                  console.warn(`Invalid or missing PayPal link for ${productCard.dataset.productName}: ${paypalLink || 'not provided'}`);
             }
 
-            // --- MODIFIÉ/AJOUTÉ: Réinitialiser la sélection des tailles ---
             modalSizeButtons.forEach(btn => btn.classList.remove('selected'));
             currentSelectedSize = null;
-            // --- FIN MODIFIÉ/AJOUTÉ ---
 
             modal.classList.add('active');
             modal.setAttribute('aria-hidden', 'false');
             document.body.classList.add('modal-open');
-            modal.querySelector('.modal-dialog').focus();
+            modal.querySelector('.modal-dialog').focus(); // Focus pour accessibilité
         }
 
         function closeModal() {
@@ -1220,7 +1282,7 @@
         modal.addEventListener('click', event => (event.target === modal) && closeModal());
         document.addEventListener('keydown', event => (event.key === 'Escape' && modal.classList.contains('active')) && closeModal());
 
-        console.log("TacoTypo Cyber-Pop v3.5 (Visual Size Selection) initialized. System online.");
+        console.log("TacoTypo Cyber-Pop v3.5 (SEO Enhanced) initialized. System online.");
     });
     </script>
 </body>
